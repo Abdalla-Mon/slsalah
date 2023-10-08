@@ -48,7 +48,7 @@ header {
   color: white;
 }
 .lower-navbar .asking_btn {
-  background: linear-gradient(94.84deg, #304259 27.16%, #347BD9 170.44%);
+  background: linear-gradient(94.84deg, #304259 27.16%, #347bd9 170.44%);
   color: white;
   padding: 8px 16px;
   cursor: pointer;
@@ -110,8 +110,8 @@ header {
   color: white;
   width: 10px;
   height: 10px;
-  background-color: #8E9AA6;
-  color: #8E9AA6;
+  background-color: #8e9aa6;
+  color: #8e9aa6;
   overflow: hidden;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -139,6 +139,86 @@ header {
   height: 25px;
 }
 
+.video_section {
+  padding: 100px 0;
+}
+.video_section h2,
+.video_section h5 {
+  text-align: center;
+}
+.video_section h2 {
+  font-weight: bold;
+  font-size: calc(40px + 0.5vw);
+  color: #181818;
+}
+.video_section h2 span {
+  color: #1b4071;
+}
+.video_section h5 {
+  max-width: 800px;
+  margin: 20px auto 50px;
+  line-height: 1.6;
+  font-size: calc(20px + 0.5vw);
+  color: #595566;
+}
+.video_section .video_container {
+  display: flex;
+  position: relative;
+  padding: 0 40px 40px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+.video_section .video_container img {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+.video_section .video_container::before {
+  content: "";
+  height: 180px;
+  width: 160px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #1b4071;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  z-index: -1;
+}
+.video_section .video_container .video_icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  transform: translate(-50%, -50%);
+  animation: ripple 1.5s linear infinite;
+  -webkit-animation: ripple 1.5s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(255, 255, 255, 0.2), 0 0 0 0.2rem rgba(255, 255, 255, 0.2), 0 0 0 0.7rem rgba(255, 255, 255, 0.2), 0 0 0 1.4rem rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.2), 0 0 0 0.7rem rgba(255, 255, 255, 0.2), 0 0 0 1.4rem rgba(255, 255, 255, 0.2), 0 0 0 2rem rgba(255, 255, 255, 0);
+  }
+}
 a {
   text-decoration: unset;
 }

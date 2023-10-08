@@ -1,69 +1,68 @@
 @use "../colors" as *;
-header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
-.upper-nav{
-    padding: 12px 12px 0;
+.upper-nav {
+  padding: 12px 12px 0;
 
-    .nav-icons{
-        cursor: pointer;
+  .nav-icons {
+    cursor: pointer;
+  }
+  .contact-info {
+    p {
+      color: white;
+      &.number {
+        direction: ltr;
+      }
     }
-.contact-info{
-    p{
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.lower-navbar {
+  background-color: transparent !important;
+  .navbar-brand {
+    img {
+      width: 130px;
+    }
+  }
+  .navbar-collapse {
+    @media (max-width: 991px) {
+      background-color: black;
+      padding: 12px;
+      border-radius: 12px;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+    }
+  }
+  .nav-item {
+    a {
+      color: white;
+      &.active,
+      &:hover {
+        font-weight: bold;
         color: white;
-        &.number{
-            direction: ltr;
-        }
+      }
     }
-    img{
-        width: 16px;
-        height: 16px;
-    }
-}
-}
-.lower-navbar{
-    background-color: transparent !important;
-    .navbar-brand{
-        img{
-            width: 130px;
-        }
-    }
-    .navbar-collapse{
-       
-@media(max-width:991px){
-    background-color: black;
-    padding: 12px;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
-}
-
-    }
-    .nav-item{
-        a{
-            color: white;
-            &.active,&:hover{
-                font-weight: bold;
-                color: white;
-            }
-        }
-    }
-        .asking_btn{
-            background: $gradiant_color;
-            color: white;
-            padding: 8px 16px ;
-            cursor: pointer;
-            border: 0;
-            border-radius: 6px;
-            -webkit-border-radius: 6px;
-            -moz-border-radius: 6px;
-            -ms-border-radius: 6px;
-            -o-border-radius: 6px;
-}
+  }
+  .asking_btn {
+    background: $gradiant_color;
+    color: white;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+  }
 }
