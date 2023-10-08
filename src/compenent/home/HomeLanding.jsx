@@ -8,7 +8,7 @@ import 'swiper/css';
 
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Mousewheel, Pagination } from 'swiper/modules';
 
 
 export default function HomeLanding() {
@@ -31,8 +31,9 @@ const pagination = {
     <Swiper
     direction={'vertical'}
     pagination={pagination}
+    mousewheel={true}
 
-    modules={[Pagination]}
+    modules={[Mousewheel,Pagination]}
     className="home_swiper"
   >
   
