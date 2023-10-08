@@ -31,7 +31,7 @@ const pagination = {
     <Swiper
     direction={'vertical'}
     pagination={pagination}
-    mousewheel={true}
+    // mousewheel={true}
 
     modules={[Mousewheel,Pagination]}
     className="home_swiper"
