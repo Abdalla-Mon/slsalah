@@ -1,10 +1,12 @@
-import { useState } from "react";
-import { RouterProvider } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Outlet, Route, RouterProvider, createHashRouter, createRoutesFromElements } from "react-router-dom";
+import Navbar from "./compenent/router/Navbar";
+import Home from "./compenent/home/Home";
 const router = createHashRouter(
   createRoutesFromElements(
     <>
       <Route path="" element={<Routes />}>
-        <Route index element={<p>home</p>} />
+        <Route index element={<Home />} />
         <Route path="shop" element={<p>shop</p>} />
       </Route>
     </>
@@ -16,7 +18,6 @@ function App() {
 function Routes() {
   const [loader, setLoader] = useState(true);
 
-  const dispatch = useDispatch();
   useEffect(() => {
     setLoader(false);
   }, []);
@@ -26,7 +27,7 @@ function Routes() {
         "loading"
       ) : (
         <>
-          {/* <Navbar /> */}
+          <Navbar />
           <Outlet />
           {/* <Footer /> */}
         </>

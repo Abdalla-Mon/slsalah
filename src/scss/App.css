@@ -1,0 +1,67 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.upper-nav {
+  padding: 12px 12px 0;
+}
+.upper-nav .nav-icons {
+  cursor: pointer;
+}
+.upper-nav .contact-info p {
+  color: white;
+}
+.upper-nav .contact-info p.number {
+  direction: ltr;
+}
+.upper-nav .contact-info img {
+  width: 20px;
+  height: 20px;
+}
+
+.lower-navbar {
+  background-color: transparent !important;
+}
+.lower-navbar .nav-item a {
+  color: white;
+}
+.lower-navbar .nav-item a.active, .lower-navbar .nav-item a:hover {
+  font-weight: bold;
+}
+.lower-navbar .asking_btn {
+  background: linear-gradient(94.84deg, #304259 27.16%, #347BD9 170.44%);
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.home_swiper {
+  height: 100vh;
+}
+.home_swiper .landing_page {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  text-decoration: unset;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}/*# sourceMappingURL=App.css.map */

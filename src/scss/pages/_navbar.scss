@@ -1,0 +1,50 @@
+@use "../colors" as *;
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.upper-nav{
+    padding: 12px 12px 0;
+
+    .nav-icons{
+        cursor: pointer;
+    }
+.contact-info{
+    p{
+        color: white;
+        &.number{
+            direction: ltr;
+        }
+    }
+    img{
+        width: 20px;
+        height: 20px;
+    }
+}
+}
+.lower-navbar{
+    background-color: transparent !important;
+    .nav-item{
+        a{
+            color: white;
+            &.active,&:hover{
+                font-weight: bold;
+            }
+        }
+    }
+        .asking_btn{
+            background: $gradiant_color;
+            color: white;
+            padding: 8px 16px ;
+            cursor: pointer;
+            border: 0;
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            -ms-border-radius: 6px;
+            -o-border-radius: 6px;
+}
+}
