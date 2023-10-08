@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsPlayFill } from "react-icons/bs";
-
+import { motion } from "framer-motion";
 // Import Swiper styles
 import "swiper/css";
 // import 'swiper/css/pagination';
@@ -58,6 +58,7 @@ export default function HomeLanding() {
         })}
       </Swiper>
       <VideoSection />
+      <Platform />
     </div>
   );
 }
@@ -81,5 +82,150 @@ function VideoSection() {
         </div>
       </div>
     </div>
+  );
+}
+
+function Platform() {
+  const [hoverd, sethoverd] = useState(false);
+  const firstRow = [
+    {
+      text: "فكرة المشروع",
+      index: 1,
+      altText:
+        "تقديم جلسة عصف ذهني لمناقشة فكرة المشروع والوصول الى أفضل فكرة تلامس حاجة السوق",
+    },
+    {
+      text: "تصميم نموذج العمل التجاري",
+      index: 2,
+      altText: " تصميم نموذج العمل التجاري لإظهار ملامح المشروع.",
+    },
+    {
+      text: "دراسة جدوى",
+      index: 3,
+      altText:
+        "إعداد ملف دراسة جدوى معتمدة (المالية – القانونية –  الفنية – السوقية) للمشروع.",
+    },
+    {
+      text: "دراسة وتحليل",
+      index: 4,
+      altText: "دراسة وتحليل السوق تحليل المنافسين  تحليل الجمهور المستهدف.",
+    },
+  ];
+  const secondRow = [
+    {
+      text: "تصميم الهويةالبصرية للمشوع",
+      index: 5,
+      altText:
+        "تصميم الهوية البصرية وفلسفة الشعار واختيار اسم تجاري إبداعي وفريد أو فكرة العلامة التجارية بما يتوافق مع النشاط والصناعة",
+    },
+    {
+      text: "ملخص وعرض استثمار تصميم نموذج العمل التجاري",
+      index: 6,
+      altText: "تقديم ملخص وعرض استثمار لجذب التمويل والمستثمرين.",
+    },
+    {
+      text: "الاستشارات والحلول القانونية",
+      index: 7,
+      altText: "تقديم الاستشارات والحلول القانونية.",
+    },
+    {
+      text: "بناء هيكلية الموارد البشرية",
+      index: 8,
+      altText: "بناء هيكلية الموارد البشرية والتوصيف الوظيفي.",
+    },
+  ];
+  const thirdRow = [
+    {
+      text: "الاستشارات والحلول التقنية.",
+      index: 9,
+      altText: "تقديم الاستشارات والحلول التقنية.",
+    },
+    {
+      text: "بناء استراتيجية التسويق",
+      index: 10,
+      altText: "بناء استراتيجية التسويق حسب نوع النشاط وميزانية الانطلاقة.",
+    },
+    {
+      text: "تحديد الأهداف ووضع خطةعمل متكاملة الاستشارات والحلول القانونية",
+      index: 11,
+      altText:
+        " تحديد الأهداف ووضع خطة عمل متكاملة تتضمن الخطة التشغيلية والخطة التسويقية.",
+    },
+  ];
+  return (
+    <div className="platform">
+      <h2>حقيبة ريادي</h2>
+      <div className="container">
+        <div className="row first-row">
+          {firstRow.map((e) => {
+            return (
+              <PlatFomrCard
+                key={e.index}
+                text={e.text}
+                altText={e.altText}
+                index={e.index}
+                sethoverd={sethoverd}
+                hoverd={hoverd}
+              />
+            );
+          })}
+        </div>
+        <div className="row second-row">
+          {secondRow.map((e) => {
+            return (
+              <PlatFomrCard
+                key={e.index}
+                text={e.text}
+                altText={e.altText}
+                index={e.index}
+                sethoverd={sethoverd}
+                hoverd={hoverd}
+              />
+            );
+          })}
+        </div>
+        <div className="row third-row">
+          {thirdRow.map((e) => {
+            return (
+              <PlatFomrCard
+                key={e.index}
+                text={e.text}
+                altText={e.altText}
+                index={e.index}
+                sethoverd={sethoverd}
+                hoverd={hoverd}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+}
+function PlatFomrCard({ hoverd, text, altText, index, sethoverd }) {
+  return (
+    <motion.div
+      className={"platform_card col card" + `_${index}`}
+      whileHover={() => sethoverd(true)}
+      onHoverEnd={() => sethoverd(false)}
+    >
+      {hoverd ? (
+        <motion.div
+          className="text"
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.3 }}
+        >
+          {altText}
+        </motion.div>
+      ) : (
+        <motion.div
+          className="text"
+          animate={{ opacity: [0, 1] }}
+          transition={{ duration: 0.3 }}
+        >
+          {text}
+        </motion.div>
+      )}
+    </motion.div>
   );
 }

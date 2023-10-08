@@ -1,5 +1,11 @@
 @use "../../colors" as *;
-
+.home {
+  h2 {
+    font-weight: bold;
+    font-size: calc(40px + 0.5vw);
+    text-align: center;
+  }
+}
 .home_swiper {
   height: 100vh;
 
@@ -88,8 +94,6 @@
     text-align: center;
   }
   h2 {
-    font-weight: bold;
-    font-size: calc(40px + 0.5vw);
     color: $heading_color;
     span {
       color: $primary_color;

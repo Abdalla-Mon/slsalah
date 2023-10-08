@@ -60,6 +60,12 @@ header {
   -o-border-radius: 6px;
 }
 
+.home h2 {
+  font-weight: bold;
+  font-size: calc(40px + 0.5vw);
+  text-align: center;
+}
+
 .home_swiper {
   height: 100vh;
 }
@@ -147,8 +153,6 @@ header {
   text-align: center;
 }
 .video_section h2 {
-  font-weight: bold;
-  font-size: calc(40px + 0.5vw);
   color: #181818;
 }
 .video_section h2 span {
