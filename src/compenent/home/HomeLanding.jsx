@@ -88,7 +88,7 @@ function VideoSection() {
 
 function Platform() {
   const [hoverd, sethoverd] = useState(false);
-  const firstRow = [
+  const platformData = [
     {
       text: "فكرة المشروع",
       index: 1,
@@ -111,8 +111,6 @@ function Platform() {
       index: 4,
       altText: "دراسة وتحليل السوق تحليل المنافسين  تحليل الجمهور المستهدف.",
     },
-  ];
-  const secondRow = [
     {
       text: `تصميم
        الهوية
@@ -137,8 +135,6 @@ function Platform() {
       index: 8,
       altText: "بناء هيكلية الموارد البشرية والتوصيف الوظيفي.",
     },
-  ];
-  const thirdRow = [
     {
       text: "الاستشارات والحلول التقنية.",
       index: 9,
@@ -156,40 +152,13 @@ function Platform() {
         " تحديد الأهداف ووضع خطة عمل متكاملة تتضمن الخطة التشغيلية والخطة التسويقية.",
     },
   ];
+
   return (
     <div className="platform">
       <h2>حقيبة ريادي</h2>
       <div className="container">
         <div className="row first-row">
-          {firstRow.map((e) => {
-            return (
-              <PlatFomrCard
-                key={e.index}
-                text={e.text}
-                altText={e.altText}
-                index={e.index}
-                sethoverd={sethoverd}
-                hoverd={hoverd}
-              />
-            );
-          })}
-        </div>
-        <div className="row second-row">
-          {secondRow.map((e) => {
-            return (
-              <PlatFomrCard
-                key={e.index}
-                text={e.text}
-                altText={e.altText}
-                index={e.index}
-                sethoverd={sethoverd}
-                hoverd={hoverd}
-              />
-            );
-          })}
-        </div>
-        <div className="row third-row">
-          {thirdRow.map((e) => {
+          {platformData.map((e) => {
             return (
               <PlatFomrCard
                 key={e.index}
@@ -210,7 +179,8 @@ function PlatFomrCard({ hoverd, text, altText, index, sethoverd }) {
   return (
     <motion.div
       className={
-        "platform_card col d-flex justify-content-between card" + `_${index}`
+        "platform_card col-12 col-md-6 col-lg-4 col-x d-flex justify-content-between card" +
+        `_${index}`
       }
       whileHover={() => sethoverd(true)}
       onHoverEnd={() => sethoverd(false)}
@@ -242,7 +212,7 @@ function PlatFomrCard({ hoverd, text, altText, index, sethoverd }) {
   );
 }
 function Services() {
-  const firstServiceRow = [
+  const servcesData = [
     {
       text: `الاستشارات والحلول الإدارية  والمالية`,
       img: "./home_imgs/services1.svg",
@@ -255,8 +225,6 @@ function Services() {
       text: `استشارات الموارد البشرية`,
       img: "./home_imgs/services3.svg",
     },
-  ];
-  const secondServiceRow = [
     {
       text: `الاستشارات والحلول التقنية
 `,
@@ -272,16 +240,13 @@ function Services() {
 `,
       img: "./home_imgs/services6.svg",
     },
-  ];
-  const thirdServiceRow = [
     {
       text: `خدمات التصميم والحملات 
       الإعلانية`,
       img: "./home_imgs/services7.svg",
     },
-    { text: "", img: "" },
-    { text: "", img: "" },
   ];
+
   return (
     <>
       <div className="services">
@@ -292,20 +257,8 @@ function Services() {
             تلبي احتياجاتك بكفاءة واحترافية.
           </h5>
         </div>
-        <div className="row">
-          {firstServiceRow.map((e) => (
-            <ServiceCard key={e.text} e={e} />
-          ))}
-        </div>
-        <div className="row">
-          {" "}
-          {secondServiceRow.map((e) => (
-            <ServiceCard key={e.text} e={e} />
-          ))}
-        </div>
-        <div className="row">
-          {" "}
-          {thirdServiceRow.map((e) => (
+        <div className="row ">
+          {servcesData.map((e) => (
             <ServiceCard key={e.text} e={e} />
           ))}
         </div>
@@ -316,7 +269,7 @@ function Services() {
 
 function ServiceCard({ e }) {
   return (
-    <div className="col">
+    <div className="col-12 col-md-6 col-lg-4 ">
       <div className={e.text.length > 0 ? "service_card" : "empty"}>
         <img src={e.img} alt={e.text} />
         <h4>{e.text}</h4>
