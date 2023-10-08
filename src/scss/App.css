@@ -310,7 +310,7 @@ header {
 }
 .services .service_card {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   position: relative;
   overflow: hidden;
   border-radius: 6px;
@@ -318,6 +318,11 @@ header {
   -moz-border-radius: 6px;
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
+}
+@media (min-width: 1200px) {
+  .services .service_card {
+    padding: 60px 40px;
+  }
 }
 .services .service_card:hover {
   color: white;

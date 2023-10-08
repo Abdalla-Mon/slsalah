@@ -253,8 +253,11 @@
   }
   .service_card {
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     position: relative;
+    @media (min-width: 1200px) {
+      padding: 60px 40px;
+    }
     &:hover {
       color: white;
       &::before {
