@@ -8,7 +8,12 @@ header {
 }
 .upper-nav {
   padding: 12px 12px 0;
-
+  .container {
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  }
   .nav-icons {
     cursor: pointer;
   }

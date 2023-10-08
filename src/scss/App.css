@@ -9,6 +9,12 @@ header {
 .upper-nav {
   padding: 12px 12px 0;
 }
+@media (max-width: 767px) {
+  .upper-nav .container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
 .upper-nav .nav-icons {
   cursor: pointer;
 }
