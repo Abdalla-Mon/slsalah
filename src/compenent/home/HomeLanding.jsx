@@ -113,7 +113,10 @@ function Platform() {
   ];
   const secondRow = [
     {
-      text: "تصميم الهويةالبصرية للمشوع",
+      text: `تصميم
+       الهوية
+       البصرية
+        للمشوع`,
       index: 5,
       altText:
         "تصميم الهوية البصرية وفلسفة الشعار واختيار اسم تجاري إبداعي وفريد أو فكرة العلامة التجارية بما يتوافق مع النشاط والصناعة",
@@ -205,13 +208,15 @@ function Platform() {
 function PlatFomrCard({ hoverd, text, altText, index, sethoverd }) {
   return (
     <motion.div
-      className={"platform_card col card" + `_${index}`}
+      className={
+        "platform_card col d-flex justify-content-between card" + `_${index}`
+      }
       whileHover={() => sethoverd(true)}
       onHoverEnd={() => sethoverd(false)}
     >
       {hoverd ? (
         <motion.div
-          className="text"
+          className="text_hover"
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.3 }}
         >
@@ -226,6 +231,12 @@ function PlatFomrCard({ hoverd, text, altText, index, sethoverd }) {
           {text}
         </motion.div>
       )}
+      <div className="number">
+        <span>
+          {index}
+          <p></p>
+        </span>
+      </div>
     </motion.div>
   );
 }
