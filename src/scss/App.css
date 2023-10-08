@@ -26,6 +26,9 @@ header {
 .lower-navbar {
   background-color: transparent !important;
 }
+.lower-navbar .navbar-brand img {
+  width: 130px;
+}
 @media (max-width: 991px) {
   .lower-navbar .navbar-collapse {
     background-color: black;
