@@ -59,6 +59,7 @@ export default function HomeLanding() {
       </Swiper>
       <VideoSection />
       <Platform />
+      <Services />
     </div>
   );
 }
@@ -238,5 +239,94 @@ function PlatFomrCard({ hoverd, text, altText, index, sethoverd }) {
         </span>
       </div>
     </motion.div>
+  );
+}
+function Services() {
+  const firstServiceRow = [
+    {
+      text: `الاستشارات والحلول الإدارية  والمالية`,
+      img: "./home_imgs/services1.svg",
+    },
+    {
+      text: `الاستشارات والحلول القانونية`,
+      img: "./home_imgs/services2.svg",
+    },
+    {
+      text: `استشارات الموارد البشرية`,
+      img: "./home_imgs/services3.svg",
+    },
+  ];
+  const secondServiceRow = [
+    {
+      text: `الاستشارات والحلول التقنية
+`,
+      img: "./home_imgs/services4.svg",
+    },
+    {
+      text: `الاستشارات والحلول التسويقية
+`,
+      img: "./home_imgs/services5.svg",
+    },
+    {
+      text: `الخدمات التسويقية
+`,
+      img: "./home_imgs/services6.svg",
+    },
+  ];
+  const thirdServiceRow = [
+    {
+      text: `خدمات التصميم والحملات 
+      الإعلانية`,
+      img: "./home_imgs/services7.svg",
+    },
+    { text: "", img: "" },
+    { text: "", img: "" },
+  ];
+  return (
+    <>
+      <div className="services">
+        <div className="container">
+          <h2>الخدمات</h2>
+          <h5>
+            بفضل خبرتنا الواسعة والمتنوعة، نقدم مجموعة متنوعة من الخدمات التي
+            تلبي احتياجاتك بكفاءة واحترافية.
+          </h5>
+        </div>
+        <div className="row">
+          {firstServiceRow.map((e) => (
+            <ServiceCard key={e.text} e={e} />
+          ))}
+        </div>
+        <div className="row">
+          {" "}
+          {secondServiceRow.map((e) => (
+            <ServiceCard key={e.text} e={e} />
+          ))}
+        </div>
+        <div className="row">
+          {" "}
+          {thirdServiceRow.map((e) => (
+            <ServiceCard key={e.text} e={e} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
+}
+
+function ServiceCard({ e }) {
+  return (
+    <div className="col">
+      <div className={e.text.length > 0 ? "service_card" : "empty"}>
+        <img src={e.img} alt={e.text} />
+        <h4>{e.text}</h4>
+        {e.text.length > 0 && (
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            vestibulum lectus vitae justo tristique, nec malesuada elit{" "}
+          </p>
+        )}
+      </div>
+    </div>
   );
 }
