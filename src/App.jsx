@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import { RouterProvider } from "react-router-dom";
 const router = createHashRouter(
   createRoutesFromElements(
