@@ -60,12 +60,12 @@ function LowerNavbar(){
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse  flex-row-reverse" id="navbarText mx-auto" >
+    <div className="collapse navbar-collapse  flex-row-reverse" id="navbarText" >
       <ul className="navbar-nav me-auto ms-auto mb-2 mb-lg-0  gap-4">
         {navItems.map((e,index)=>{
             return(
                 <li className='nav-item' key={e.text}>
-                    <NavLink to={e.route}>{e.text}</NavLink>
+                    <NavLink className="nav-link" to={e.route}>{e.text}</NavLink>
                 </li>
             )
         })}

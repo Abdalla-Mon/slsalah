@@ -26,11 +26,23 @@ header {
 .lower-navbar {
   background-color: transparent !important;
 }
+@media (max-width: 991px) {
+  .lower-navbar .navbar-collapse {
+    background-color: black;
+    padding: 12px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+}
 .lower-navbar .nav-item a {
   color: white;
 }
 .lower-navbar .nav-item a.active, .lower-navbar .nav-item a:hover {
   font-weight: bold;
+  color: white;
 }
 .lower-navbar .asking_btn {
   background: linear-gradient(94.84deg, #304259 27.16%, #347BD9 170.44%);
@@ -55,6 +67,46 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.home_swiper .landing_page h1 {
+  color: white;
+  font-weight: bold;
+  font-size: calc(2.5rem + 0.5vw);
+  text-align: center;
+}
+.home_swiper .swiper-pagination {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  z-index: 10;
+}
+.home_swiper .swiper-pagination span {
+  color: white;
+  width: 10px;
+  height: 10px;
+  background-color: #8E9AA6;
+  color: #8E9AA6;
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+}
+.home_swiper .swiper-pagination span.swiper-pagination-bullet-active {
+  color: #ffffff;
+  width: 30px;
+  height: 30px;
 }
 
 a {
