@@ -68,6 +68,9 @@ header {
   align-items: center;
   justify-content: center;
 }
+.home_swiper .landing_page > div {
+  position: relative;
+}
 .home_swiper .landing_page h1 {
   color: white;
   font-weight: bold;

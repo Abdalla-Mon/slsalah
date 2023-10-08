@@ -38,7 +38,7 @@ const pagination = {
   
     {swiperData.map((e)=>{
         return(
-            <SwiperSlide key={e.text}> <div className={"landing_page "} style={{backgroundImage:`url(${e.bg})`}}><h1>{e.text}</h1></div></SwiperSlide>
+            <SwiperSlide className="landing_page" style={{backgroundImage:`url(${e.bg})`}} key={e.text}> <div className={"container "} ><h1>{e.text}</h1></div></SwiperSlide>
         )
     })}
 
