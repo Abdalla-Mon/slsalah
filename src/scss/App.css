@@ -226,18 +226,27 @@ header {
 .platform {
   padding: 100px 15px;
 }
-.platform h2 {
+@media (max-width: 767px) {
+  .platform .container {
+    overflow: hidden;
+    padding: 0 40px;
+  }
+}
+
+h2 {
   margin-bottom: 40px;
   color: #1b4071;
 }
-.platform .third-row {
+
+.third-row {
   padding: 0px 80px;
 }
-.platform .platform_card {
+
+.platform_card {
   height: 220px;
   padding: 20px 15px;
 }
-.platform .platform_card .text {
+.platform_card .text {
   width: -moz-fit-content;
   width: fit-content;
   text-align: center;
@@ -250,16 +259,16 @@ header {
   line-height: 1.6;
 }
 @media (min-width: 991px) {
-  .platform .platform_card .text {
+  .platform_card .text {
     width: 75%;
   }
 }
 @media (min-width: 1200px) {
-  .platform .platform_card .text {
+  .platform_card .text {
     width: 65%;
   }
 }
-.platform .platform_card .text_hover {
+.platform_card .text_hover {
   width: 75%;
   font-size: 0.9rem;
   text-align: center;
@@ -269,13 +278,13 @@ header {
   align-items: center;
   line-height: 1.6;
 }
-.platform .platform_card .number {
+.platform_card .number {
   width: 75px;
   background: red;
   position: relative;
   border-radius: 12px 0 0 12px;
 }
-.platform .platform_card .number span {
+.platform_card .number span {
   color: transparent;
   -webkit-text-stroke: 4px black;
   font-size: 8rem;
@@ -286,10 +295,10 @@ header {
   bottom: 5px;
   line-height: 1;
 }
-.platform .platform_card .number span p {
+.platform_card .number span p {
   position: absolute;
 }
-.platform .platform_card .number span p::before {
+.platform_card .number span p::before {
   content: "";
 }
 

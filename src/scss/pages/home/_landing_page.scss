@@ -171,72 +171,79 @@
 
 .platform {
   padding: 100px 15px;
-  h2 {
-    margin-bottom: 40px;
-    color: $primary_color;
-  }
-  .third-row {
-    padding: 0px 80px;
-  }
-  .platform_card {
-    height: 220px;
-    padding: 20px 15px;
-    .text {
-      //   width: 100px;
-      width: fit-content;
-      text-align: center;
-      @media (min-width: 991px) {
-        width: 75%;
-      }
-      @media (min-width: 1200px) {
-        width: 65%;
-      }
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      line-height: 1.6;
+  .container {
+    @media (max-width: 767px) {
+      overflow: hidden;
+      padding: 0 40px;
     }
-    .text_hover {
+  }
+}
+h2 {
+  margin-bottom: 40px;
+  color: $primary_color;
+}
+.third-row {
+  padding: 0px 80px;
+}
+.platform_card {
+  height: 220px;
+  padding: 20px 15px;
+  .text {
+    //   width: 100px;
+    width: fit-content;
+    text-align: center;
+    @media (min-width: 991px) {
       width: 75%;
-      font-size: 0.9rem;
-      text-align: center;
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      line-height: 1.6;
     }
-    .number {
-      width: 75px;
-      background: red;
-      position: relative;
-      border-radius: 12px 0 0 12px;
-      span {
-        color: transparent;
-        -webkit-text-stroke: 4px black;
-        font-size: 8rem;
+    @media (min-width: 1200px) {
+      width: 65%;
+    }
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  .text_hover {
+    width: 75%;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+  }
+  .number {
+    width: 75px;
+    background: red;
+    position: relative;
+    border-radius: 12px 0 0 12px;
+    span {
+      color: transparent;
+      -webkit-text-stroke: 4px black;
+      font-size: 8rem;
+      position: absolute;
+      // right: -11px;
+      // bottom: -20px;
+      display: flex;
+      letter-spacing: -10px;
+      right: -10px;
+      bottom: 5px;
+      line-height: 1;
+      p {
         position: absolute;
-        // right: -11px;
-        // bottom: -20px;
-        display: flex;
-        letter-spacing: -10px;
-        right: -10px;
-        bottom: 5px;
-        line-height: 1;
-        p {
-          position: absolute;
 
-          &::before {
-            content: "";
-          }
+        &::before {
+          content: "";
         }
       }
     }
   }
 }
+
 .services {
   padding: 100px 15px;
   h2 {
